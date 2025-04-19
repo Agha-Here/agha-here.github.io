@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agha Abdul Rafay - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .matrix-bg,
+    .particle-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      /* display: none; / */
+
+    }
+
+    .matrix-section .matrix-bg {
+      display: block;
+      opacity: 0.7;
+    }
+
+    .particle-section .particle-bg {
+      display: block;
+      opacity: 0.4;
+    }
+
+    .matrix-section .particle-bg,
+    .particle-section .matrix-bg {
+      display: none;
+    }
+
+
+    html,
+    body {
+      scroll-snap-type: y mandatory;
+      margin: 0;
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
+      /* background: #000; */
+      color: #fff;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    section {
+      scroll-snap-align: start;
+      height: 100vh;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transition: all 0.5s ease;
+      overflow: hidden;
+    }
+
+    .particle-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    section.bg-gray-900 .particle-bg {
+      display: block;
+    }
+
+    /* Add tech-themed decorative elements */
+    .tech-border {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ff0000, transparent);
+      animation: scanline 2s linear infinite;
+    }
+
+    @keyframes scanline {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Enhance project cards */
+    .project-card {
+      position: relative;
+      border: 1px solid #ff0000;
+      padding: 1.5rem;
+      border-radius: 8px;
+      background: rgba(20, 20, 20, 0.7);
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 0;
+      background: #ff0000;
+      transition: height 0.3s ease;
+    }
+
+    .project-card:hover::before {
+      height: 100%;
+    }
+
+    .btn {
+      border: 2px solid #ff0000;
+      padding: 1rem 2rem;
+      color: #ff0000;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff0000;
+      color: #fff;
+    }
+
+    /* Add these styles */
+    .skill-item {
+      position: relative;
+      padding: 1rem;
+      background: rgba(255, 0, 0, 0.1);
+      border: 1px solid #ff0000;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+    }
+
+    .experience-card {
+      position: relative;
+      padding: 2rem;
+      border: 1px solid #ff0000;
+      border-radius: 8px;
+      margin: 1rem 0;
+      background: rgba(20, 20, 20, 0.7);
+    }
+
+    .education-item {
+      position: relative;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-left: 3px solid #ff0000;
+      background: rgba(20, 20, 20, 0.7);
+      transition: all 0.3s ease;
+    }
+
+    .education-item:hover {
+      transform: translateX(10px);
+    }
+
+    /* Add this to control background for different sections */
+    #about,
+    #projects,
+    #education {
+      background: rgba(17, 24, 39, 0.8);
+      /* backdrop-filter: blur(5px); */
+    }
+
+    /* Add these animation classes */
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <canvas id="matrixCanvas" class="matrix-bg"></canvas>
+  <canvas id="particleCanvas" class="particle-bg"></canvas>
+
+
+  <!-- 🎬 LANDING PAGE -->
+  <section id="landing" class="matrix-section">
+    <h1 class="text-5xl md:text-6xl text-center mb-6">AGHA ABDUL RAFAY</h1>
+    <p class="text-center mb-8 text-lg md:text-xl">Crafting Future-Ready Tech with Stealth and Precision</p>
+    <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Enter
+      Portfolio</button>
+  </section>
+
+  <!-- 🧠 ABOUT -->
+  <section id="about" class="particle-section">
+    <h2 class="text-4xl text-red-500 mb-4">About Me</h2>
+    <p class="max-w-2xl text-center">I'm a recent IT graduate skilled in full-stack development, Python programming, and
+      database management. Known for problem-solving and innovation, I bring code and creativity together to build
+      efficient, real-world solutions.</p>
+  </section>
+
+  <!-- 🛠️ SKILLS -->
+  <!-- <section id="skills" class="matrix-section">
+  <h2 class="text-4xl text-red-500 mb-6">Skills</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center max-w-3xl">
+    <div>Python</div><div>Django</div><div>MySQL</div>
+    <div>HTML/CSS</div><div>JavaScript</div><div>WordPress</div>
+    <div>Git & GitHub</div><div>Cloudinary</div><div>SEO Tools</div>
+    <div>Linux</div><div>DBMS</div><div>Cybersecurity</div>
+  </div>
+</section> -->
+
+  <section id="skills" class="matrix-section">
+    <h2 class="text-4xl text-red-500 mb-6">Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full">
+      <div class="skill-category">
+        <h3 class="text-xl text-red-400 mb-4">Frontend</h3>
+        <div class="space-y-4">
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span>HTML/CSS</span>
+              <span>90%</span>
+            </div>
+            <div class="h-2 bg-gray-700 rounded">
+              <div class="h-full bg-red-500 rounded" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span>JavaScript</span>
+              <span>60%</span>
+            </div>
+            <div class="h-2 bg-gray-700 rounded">
+              <div class="h-full bg-red-500 rounded" style="width: 60%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span>Wordpress</span>
+              <span>70%</span>
+            </div>
+            <div class="h-2 bg-gray-700 rounded">
+              <div class="h-full bg-red-500 rounded" style="width: 70%"></div>
+            </div>
+          </div>
+          <!-- Add more skills similarly -->
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="text-xl text-red-400 mb-4">Back-end</h3>
+        <div class="space-y-4">
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span>Python-django</span>
+              <span>80%</span>
+            </div>
+            <div class="h-2 bg-gray-700 rounded">
+              <div class="h-full bg-red-500 rounded" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span>MySQL</span>
+              <span>80%</span>
+            </div>
+            <div class="h-2 bg-gray-700 rounded">
+              <div class="h-full bg-red-500 rounded" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span>API</span>
+              <span>70%</span>
+            </div>
+            <div class="h-2 bg-gray-700 rounded">
+              <div class="h-full bg-red-500 rounded" style="width: 70%"></div>
+            </div>
+          </div>
+          <!-- Add more skills similarly -->
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="text-xl text-red-400 mb-4">Tools and Platform</h3>
+        <div class="space-y-4">
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span>Git-Github</span>
+              <span>90%</span>
+            </div>
+            <div class="h-2 bg-gray-700 rounded">
+              <div class="h-full bg-red-500 rounded" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span>CMS (Wordpress/shopify)</span>
+              <span>80%</span>
+            </div>
+            <div class="h-2 bg-gray-700 rounded">
+              <div class="h-full bg-red-500 rounded" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span>Linux</span>
+              <span>50%</span>
+            </div>
+            <div class="h-2 bg-gray-700 rounded">
+              <div class="h-full bg-red-500 rounded" style="width: 50%"></div>
+            </div>
+          </div>
+          <!-- Add more skills similarly -->
+        </div>
+      </div>
+
+      <!-- Add more skill categories -->
+    </div>
+
+
+
+  </section>
+  
+  <section >
+    <h2 class="text-4xl text-red-500 mb-6">Experience</h2>
+    <div class="max-w-4xl w-full">
+      <div class="experience-card grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
+       
+        <div class="skill-category">
+          <h3 class="text-xl text-red-400 mb-4">Tools and Platform</h3>
+          <div class="space-y-4 grid grid-cols-1 md:grid-cols-2 gap-2 max-w-5xl w-full">
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>CMS</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>CMS</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Linux</span>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Linux</span>
+              </div>
+            </div>
+
+            
+            <!-- Add more skills similarly -->
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="text-xl text-red-400 mb-4">Tools and Platform</h3>
+          <div class="space-y-4">
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Git-Github</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>CMS (Wordpress/shopify)</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Linux</span>
+              </div>
+            </div>
+            <!-- Add more skills similarly -->
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 💼 PROJECTS -->
+  <!-- <section id="projects" class="particle-section">
+  <h2 class="text-4xl text-red-500 mb-6">Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 max-w-5xl">
+    <div class="p-6 border border-red-600 rounded-lg hover:bg-red-900 transition">
+      <h3 class="text-2xl mb-2">TimeCapsule</h3>
+      <p class="mb-2">A web app to store and send future-dated messages with media. Built using Django, JS, MySQL, GSAP & Cloudinary.</p>
+      <a href="https://timecapsule-r26e.onrender.com/" target="_blank" class="underline text-blue-400">Visit Project</a>
+    </div>
+    <div class="p-6 border border-red-600 rounded-lg hover:bg-red-900 transition">
+      <h3 class="text-2xl mb-2">BidWise</h3>
+      <p class="mb-2">Final year project — secure auction platform like OLX with bid system, buyer verification & seller rating. Laravel-powered.</p>
+    </div>
+  </div>
+</section> -->
+
+  <section id="projects" class="particle-section">
+    <h2 class="text-4xl text-red-500 mb-6">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
+      <div class="project-card group">
+        <div class="relative overflow-hidden rounded-lg mb-4">
+          <img src="project1-image.jpg" alt="Project Preview" class="w-full h-48 object-cover">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+        <!-- Add project details -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Update Experience Section -->
+  <section id="experience" class="matrix-section">
+    <h2 class="text-4xl text-red-500 mb-6">Experience</h2>
+    <div class="max-w-4xl w-full">
+      <div class="experience-card">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="text-xl font-bold">Python Django Intern</h3>
+            <p class="text-red-400">CodeNova Solutions</p>
+          </div>
+          <span class="text-sm text-gray-400">2023 - Present</span>
+        </div>
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
+          <li>Developed and maintained web applications using Django</li>
+          <li>Implemented RESTful APIs and database optimizations</li>
+          <li>Collaborated with team using Git version control</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎓 EDUCATION
+<section id="education" class="particle-section">
+    <h2 class="text-4xl text-red-500 mb-4">Education</h2>
+  <div class="text-center">
+    <p class="mb-2">🎓 BS Information Technology – University of Sindh (2021–2025)</p>
+    <p class="mb-2">🎓 Advanced Diploma in Software Engineering – Aptech (2021–2023)</p>
+    <p>📜 Blockchain Certification – Google Dev Launchpad (2024–2025)</p>
+  </div>
+</section> -->
+
+  <!-- Update Education Section -->
+  <section id="education" class="particle-section">
+    <h2 class="text-4xl text-red-500 mb-6">Education</h2>
+    <div class="max-w-4xl w-full space-y-6">
+      <div class="education-item">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-xl font-bold">BS Information Technology</h3>
+            <p class="text-red-400">University of Sindh</p>
+          </div>
+          <span class="text-sm text-gray-400">2021 - 2025</span>
+        </div>
+        <p class="mt-2 text-gray-300">Major courses: Data Structures, Web Development, Database Management</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📬 CONTACT -->
+  <section id="contact" class="matrix-section">
+    <h2 class="text-4xl text-red-500 mb-4">Contact</h2>
+    <p class="mb-2">📧 contact.agharafay@gmail.com</p>
+    <p class="mb-2">📱 0345-3556877</p>
+    <p class="mb-2">🔗 <a href="https://www.linkedin.com/in/agha-rafay" target="_blank"
+        class="underline text-blue-400">LinkedIn</a></p>
+    <p>💻 <a href="https://github.com/rafaydev" target="_blank" class="underline text-blue-400">GitHub</a></p>
+  </section>
+
+  <script>
+    // Matrix effect
+    const canvas = document.getElementById("matrixCanvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = "1010101100110101";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#888";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(drawMatrix, 35);
+
+    window.addEventListener("resize", () => {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+    });
+
+    // Add this to your existing script
+    // Replace the existing initParticles function with this improved version
+    function initParticles() {
+      const canvas = document.getElementById('particleCanvas');
+      const ctx = canvas.getContext('2d');
+
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+
+      canvas.width = width;
+      canvas.height = height;
+
+      const particles = [];
+      const particleCount = 150; // Adjusted count
+
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+
+        reset() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = (Math.random() - 0.5) * 2;
+          this.vy = (Math.random() - 0.5) * 2;
+          this.radius = Math.random() * 2 + 1; // Increased size
+          this.opacity = Math.random() * 0.5 + 0.5; // Increased opacity
+        }
+
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+
+          if (this.x < 0 || this.x > width) this.vx = -this.vx;
+          if (this.y < 0 || this.y > height) this.vy = -this.vy;
+        }
+      }
+
+      // Create particles
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        particles.forEach((p1, i) => {
+          p1.update();
+
+          // Draw connections with increased visibility
+          particles.slice(i + 1).forEach(p2 => {
+            const dx = p1.x - p2.x;
+            const dy = p1.y - p2.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 200) { // Increased connection distance
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(255, 0, 0, ${(1 - dist / 200) * 0.5})`; // Increased opacity
+              ctx.lineWidth = 1;
+              ctx.moveTo(p1.x, p1.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.stroke();
+            }
+          });
+
+          // Draw particle
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(255, 0, 0, ${p1.opacity})`;
+          ctx.arc(p1.x, p1.y, p1.radius, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+
+      window.addEventListener('resize', () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        particles.forEach(p => p.reset());
+      });
+    }
+    // Call the function after window loads
+    window.addEventListener('load', initParticles);
+
+    // Add fade-in animation to sections
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Add this to your script section
+    document.addEventListener('DOMContentLoaded', function () {
+      // Skill progress animation
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-progress');
+          }
+        });
+      });
+
+      document.querySelectorAll('.skill-item').forEach(item => {
+        observer.observe(item);
+      });
+
+      // Typing effect for landing page
+      const text = "Crafting Future-Ready Tech with Stealth and Precision";
+      const typingElement = document.querySelector('#landing p');
+      let i = 0;
+
+      function typeWriter() {
+        if (i < text.length) {
+          typingElement.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
+        }
+      }
+
+      typeWriter();
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>
