@@ -43,7 +43,7 @@
       z-index: -1;
     }
 
-    section {
+    /* section {
       scroll-snap-align: start;
       height: 100vh;
       padding: 4rem 2rem;
@@ -54,7 +54,22 @@
       position: relative;
       transition: all 0.5s ease;
       overflow: hidden;
-    }
+    } */
+
+    section {
+        min-height: 100vh; /* Changed from height to min-height */
+        padding: 2rem 1rem; /* Reduced padding for mobile */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: all 0.5s ease;
+        overflow: visible; /* Changed from hidden to visible */
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
 
     .particle-bg {
       position: fixed;
@@ -115,6 +130,19 @@
       height: 100%;
     }
 
+    /* Improve card layouts on mobile */
+.project-card,
+.experience-card,
+.education-item {
+  width: 100%;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
     .btn {
       border: 2px solid #ff0000;
       padding: 1rem 2rem;
@@ -136,6 +164,8 @@
       border: 1px solid #ff0000;
       border-radius: 4px;
       transition: all 0.3s ease;
+      margin-bottom: 1rem;
+      width: 100%;
     }
 
     .skill-item:hover {
@@ -189,3 +219,44 @@
         transform: translateY(0);
       }
     }
+
+    /* Add responsive containers */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Responsive text sizes */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem !important;
+    }
+    h2 {
+      font-size: 1.75rem !important;
+    }
+    h3 {
+      font-size: 1.25rem !important;
+    }
+    p {
+      font-size: 1rem !important;
+    }
+    section {
+      padding: 4rem 1rem;
+    }
+    .grid {
+      grid-template-columns: 1fr !important;
+    }
+    .skill-category {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  /* Improve mobile grid layouts */
+  .grid {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+  }
+  
