@@ -47,7 +47,7 @@ const canvas = document.getElementById("matrixCanvas");
       canvas.height = height;
 
       const particles = [];
-      const particleCount = 150; // Adjusted count
+      const particleCount = 70; // Adjusted count
 
       class Particle {
         constructor() {
