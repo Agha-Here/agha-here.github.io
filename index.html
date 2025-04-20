@@ -7,199 +7,7 @@
   <title>Agha Abdul Rafay - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <style>
-    .matrix-bg,
-    .particle-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      /* display: none; / */
-
-    }
-
-    .matrix-section .matrix-bg {
-      display: block;
-      opacity: 0.7;
-    }
-
-    .particle-section .particle-bg {
-      display: block;
-      opacity: 0.4;
-    }
-
-    .matrix-section .particle-bg,
-    .particle-section .matrix-bg {
-      display: none;
-    }
-
-
-    html,
-    body {
-      scroll-snap-type: y mandatory;
-      margin: 0;
-      height: 100%;
-      font-family: 'Orbitron', sans-serif;
-      /* background: #000; */
-      color: #fff;
-    }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    section {
-      scroll-snap-align: start;
-      height: 100vh;
-      padding: 4rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      transition: all 0.5s ease;
-      overflow: hidden;
-    }
-
-    .particle-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.4;
-    }
-
-    section.bg-gray-900 .particle-bg {
-      display: block;
-    }
-
-    /* Add tech-themed decorative elements */
-    .tech-border {
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #ff0000, transparent);
-      animation: scanline 2s linear infinite;
-    }
-
-    @keyframes scanline {
-      0% {
-        transform: translateX(-100%);
-      }
-
-      100% {
-        transform: translateX(100%);
-      }
-    }
-
-    /* Enhance project cards */
-    .project-card {
-      position: relative;
-      border: 1px solid #ff0000;
-      padding: 1.5rem;
-      border-radius: 8px;
-      background: rgba(20, 20, 20, 0.7);
-      backdrop-filter: blur(5px);
-      transition: all 0.3s ease;
-    }
-
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 2px;
-      height: 0;
-      background: #ff0000;
-      transition: height 0.3s ease;
-    }
-
-    .project-card:hover::before {
-      height: 100%;
-    }
-
-    .btn {
-      border: 2px solid #ff0000;
-      padding: 1rem 2rem;
-      color: #ff0000;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #ff0000;
-      color: #fff;
-    }
-
-    /* Add these styles */
-    .skill-item {
-      position: relative;
-      padding: 1rem;
-      background: rgba(255, 0, 0, 0.1);
-      border: 1px solid #ff0000;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-
-    .skill-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
-    }
-
-    .experience-card {
-      position: relative;
-      padding: 2rem;
-      border: 1px solid #ff0000;
-      border-radius: 8px;
-      margin: 1rem 0;
-      background: rgba(20, 20, 20, 0.7);
-    }
-
-    .education-item {
-      position: relative;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-left: 3px solid #ff0000;
-      background: rgba(20, 20, 20, 0.7);
-      transition: all 0.3s ease;
-    }
-
-    .education-item:hover {
-      transform: translateX(10px);
-    }
-
-    /* Add this to control background for different sections */
-    #about,
-    #projects,
-    #education {
-      background: rgba(17, 24, 39, 0.8);
-      /* backdrop-filter: blur(5px); */
-    }
-
-    /* Add these animation classes */
-    .fade-in {
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="src/styles.css" />
 </head>
 
 <body>
@@ -219,9 +27,27 @@
   <!-- 🧠 ABOUT -->
   <section id="about" class="particle-section">
     <h2 class="text-4xl text-red-500 mb-4">About Me</h2>
-    <p class="max-w-2xl text-center">I'm a recent IT graduate skilled in full-stack development, Python programming, and
-      database management. Known for problem-solving and innovation, I bring code and creativity together to build
-      efficient, real-world solutions.</p>
+<p class="max-w-4xl text-center">
+  I'm a passionate and detail-oriented <strong>Information Technology graduate</strong> from the University of Sindh, with a strong foundation in 
+  <strong>Python, Django, full-stack web development</strong>, and <strong>database management</strong>.<br><br>
+
+  Throughout my academic journey and practical experiences, I've developed a solid grip on both <strong>technical</strong> and <strong>soft skills</strong> 
+  that make me a well-rounded tech professional.<br><br>
+
+  With a background in <strong>Software Engineering (ADSE from Aptech)</strong> and hands-on exposure to <strong>cybersecurity, cloud computing, 
+  CMS platforms like WordPress & Shopify</strong>, and <strong>DevOps fundamentals</strong>, I bring a diverse skill set to the table. 
+  I love working on projects that challenge me to <strong>think critically</strong>, write clean code, and build solutions that are not just functional — 
+  but also meaningful.<br><br>
+
+  Whether it's managing databases with <strong>MySQL</strong>, debugging issues in <strong>Linux</strong>, or collaborating with a team using 
+  <strong>Git and GitHub</strong>, I thrive in dynamic environments where I can learn, grow, and contribute.<br><br>
+
+  What sets me apart is not just my tech stack — it's my ability to <strong>adapt, communicate effectively</strong>, and stay focused under pressure. 
+  From <strong>problem-solving</strong> to <strong>project management</strong>, I believe in delivering results with a mix of creativity, logic, and purpose.<br><br>
+
+  Let’s build something impactful together.
+</p>
+
   </section>
 
   <!-- 🛠️ SKILLS -->
@@ -235,7 +61,7 @@
   </div>
 </section> -->
 
-  <section id="skills" class="matrix-section">
+  <section id="skills" class="matrix-section" style="justify-content:start;padding-top: 1rem;">
     <h2 class="text-4xl text-red-500 mb-6">Skills</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full">
       <div class="skill-category">
@@ -344,70 +170,133 @@
     </div>
 
 
+    <h2 class="text-4xl text-red-500 mb-1" style="padding-top: 2rem;">Other Skills</h2>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="experience-card grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+        <!-- Core Skills Column -->
+        <div class="skill-category">
+          <h3 class="text-xl text-red-400 mb-4">Core Skills</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="skill-item">
+              <div class="flex justify-between">
+                <span>Networking</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between">
+                <span>DBMS</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between">
+                <span>DSA</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between">
+                <span>Troubleshooting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Soft Skills Column -->
+        <div class="skill-category">
+          <h3 class="text-xl text-red-400 mb-4">Soft Skills</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="skill-item">
+              <div class="flex justify-between">
+                <span>Team Working</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between">
+                <span>Critical Thinking</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between">
+                <span>Time Management</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between">
+                <span>Communication</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+
+
 
   </section>
   
   <section >
-    <h2 class="text-4xl text-red-500 mb-6">Experience</h2>
-    <div class="max-w-4xl w-full">
-      <div class="experience-card grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
-       
+    <h2 class="text-4xl text-red-500 mb-6">Other Skills</h2>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="experience-card grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+        <!-- Core Skills Column -->
         <div class="skill-category">
-          <h3 class="text-xl text-red-400 mb-4">Tools and Platform</h3>
-          <div class="space-y-4 grid grid-cols-1 md:grid-cols-2 gap-2 max-w-5xl w-full">
-
+          <h3 class="text-xl text-red-400 mb-4">Core Skills</h3>
+          <div class="grid grid-cols-2 gap-4">
             <div class="skill-item">
-              <div class="flex justify-between mb-2">
-                <span>CMS</span>
+              <div class="flex justify-between">
+                <span>Networking</span>
               </div>
             </div>
             <div class="skill-item">
-              <div class="flex justify-between mb-2">
-                <span>CMS</span>
+              <div class="flex justify-between">
+                <span>DBMS</span>
               </div>
             </div>
             <div class="skill-item">
-              <div class="flex justify-between mb-2">
-                <span>Linux</span>
+              <div class="flex justify-between">
+                <span>DSA</span>
               </div>
             </div>
-
             <div class="skill-item">
-              <div class="flex justify-between mb-2">
-                <span>Linux</span>
+              <div class="flex justify-between">
+                <span>Troubleshooting</span>
               </div>
             </div>
-
-            
-            <!-- Add more skills similarly -->
           </div>
         </div>
-
+    
+        <!-- Soft Skills Column -->
         <div class="skill-category">
-          <h3 class="text-xl text-red-400 mb-4">Tools and Platform</h3>
-          <div class="space-y-4">
+          <h3 class="text-xl text-red-400 mb-4">Soft Skills</h3>
+          <div class="grid grid-cols-2 gap-4">
             <div class="skill-item">
-              <div class="flex justify-between mb-2">
-                <span>Git-Github</span>
+              <div class="flex justify-between">
+                <span>Team Working</span>
               </div>
             </div>
             <div class="skill-item">
-              <div class="flex justify-between mb-2">
-                <span>CMS (Wordpress/shopify)</span>
+              <div class="flex justify-between">
+                <span>Critical Thinking</span>
               </div>
             </div>
             <div class="skill-item">
-              <div class="flex justify-between mb-2">
-                <span>Linux</span>
+              <div class="flex justify-between">
+                <span>Time Management</span>
               </div>
             </div>
-            <!-- Add more skills similarly -->
+            <div class="skill-item">
+              <div class="flex justify-between">
+                <span>Communication</span>
+              </div>
+            </div>
           </div>
         </div>
-
-
+    
       </div>
     </div>
+    
   </section>
 
 
@@ -501,180 +390,8 @@
     <p>💻 <a href="https://github.com/rafaydev" target="_blank" class="underline text-blue-400">GitHub</a></p>
   </section>
 
-  <script>
-    // Matrix effect
-    const canvas = document.getElementById("matrixCanvas");
-    const ctx = canvas.getContext("2d");
 
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-
-    const letters = "1010101100110101";
-    const fontSize = 16;
-    const columns = canvas.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
-
-    function drawMatrix() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ctx.fillStyle = "#888";
-      ctx.font = fontSize + "px monospace";
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-    }
-
-    setInterval(drawMatrix, 35);
-
-    window.addEventListener("resize", () => {
-      canvas.height = window.innerHeight;
-      canvas.width = window.innerWidth;
-    });
-
-    // Add this to your existing script
-    // Replace the existing initParticles function with this improved version
-    function initParticles() {
-      const canvas = document.getElementById('particleCanvas');
-      const ctx = canvas.getContext('2d');
-
-      let width = window.innerWidth;
-      let height = window.innerHeight;
-
-      canvas.width = width;
-      canvas.height = height;
-
-      const particles = [];
-      const particleCount = 150; // Adjusted count
-
-      class Particle {
-        constructor() {
-          this.reset();
-        }
-
-        reset() {
-          this.x = Math.random() * width;
-          this.y = Math.random() * height;
-          this.vx = (Math.random() - 0.5) * 2;
-          this.vy = (Math.random() - 0.5) * 2;
-          this.radius = Math.random() * 2 + 1; // Increased size
-          this.opacity = Math.random() * 0.5 + 0.5; // Increased opacity
-        }
-
-        update() {
-          this.x += this.vx;
-          this.y += this.vy;
-
-          if (this.x < 0 || this.x > width) this.vx = -this.vx;
-          if (this.y < 0 || this.y > height) this.vy = -this.vy;
-        }
-      }
-
-      // Create particles
-      for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-      }
-
-      function animate() {
-        ctx.clearRect(0, 0, width, height);
-
-        particles.forEach((p1, i) => {
-          p1.update();
-
-          // Draw connections with increased visibility
-          particles.slice(i + 1).forEach(p2 => {
-            const dx = p1.x - p2.x;
-            const dy = p1.y - p2.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (dist < 200) { // Increased connection distance
-              ctx.beginPath();
-              ctx.strokeStyle = `rgba(255, 0, 0, ${(1 - dist / 200) * 0.5})`; // Increased opacity
-              ctx.lineWidth = 1;
-              ctx.moveTo(p1.x, p1.y);
-              ctx.lineTo(p2.x, p2.y);
-              ctx.stroke();
-            }
-          });
-
-          // Draw particle
-          ctx.beginPath();
-          ctx.fillStyle = `rgba(255, 0, 0, ${p1.opacity})`;
-          ctx.arc(p1.x, p1.y, p1.radius, 0, Math.PI * 2);
-          ctx.fill();
-        });
-
-        requestAnimationFrame(animate);
-      }
-
-      animate();
-
-      window.addEventListener('resize', () => {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width = width;
-        canvas.height = height;
-        particles.forEach(p => p.reset());
-      });
-    }
-    // Call the function after window loads
-    window.addEventListener('load', initParticles);
-
-    // Add fade-in animation to sections
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
-    });
-
-    // Add this to your script section
-    document.addEventListener('DOMContentLoaded', function () {
-      // Skill progress animation
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-progress');
-          }
-        });
-      });
-
-      document.querySelectorAll('.skill-item').forEach(item => {
-        observer.observe(item);
-      });
-
-      // Typing effect for landing page
-      const text = "Crafting Future-Ready Tech with Stealth and Precision";
-      const typingElement = document.querySelector('#landing p');
-      let i = 0;
-
-      function typeWriter() {
-        if (i < text.length) {
-          typingElement.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 50);
-        }
-      }
-
-      typeWriter();
-    });
-
-
-
-  </script>
-
+<script src="src/script.js"></script>
 </body>
 
 </html>
