@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agha Abdul Rafay - Portfolio</title>
+  <title>Agha Abdul Rafay</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="src/styles.css" />
@@ -17,39 +17,55 @@
 
 
   <!-- 🎬 LANDING PAGE -->
-  <section id="landing" class="matrix-section">
-    <h1 class="text-5xl md:text-6xl text-center mb-6">AGHA ABDUL RAFAY</h1>
-    <p class="text-center mb-8 text-lg md:text-xl">Crafting Future-Ready Tech with Stealth and Precision</p>
-    <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Enter
-      Portfolio</button>
+  <section id="landing" class="matrix-section min-h-screen flex flex-col justify-center items-center text-center px-4">
+    <!-- Name -->
+    <h1 class="text-5xl md:text-7xl font-extrabold text-red-500 drop-shadow-lg mb-4 animate-pulse">
+      AGHA ABDUL RAFAY
+    </h1>
+  
+    <!-- Typing Effect Tagline -->
+    <p class="text-lg md:text-2xl text-gray-200 mb-10 max-w-2xl h-10">
+      <span id="typing"></span><span class="text-red-500">|</span>
+    </p>
+    <!-- Cool Nav Section as CTA -->
+    <nav class="flex flex-wrap justify-center gap-4 mt-4">
+      <a href="#about" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">About</a>
+      <a href="#skills" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Skills</a>
+      <a href="#projects" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Projects</a>
+      <a href="#experience" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Experience</a>
+      <a href="#education" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Education</a>
+      <a href="#contact" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Contact</a>
+    </nav>
   </section>
+  
+  
 
   <!-- 🧠 ABOUT -->
-  <section id="about" class="particle-section">
-    <h2 class="text-4xl text-red-500 mb-4">About Me</h2>
-<p class="max-w-4xl text-center">
-  I'm a passionate and detail-oriented <strong>Information Technology graduate</strong> from the University of Sindh, with a strong foundation in 
-  <strong>Python, Django, full-stack web development</strong>, and <strong>database management</strong>.<br><br>
-
-  Throughout my academic journey and practical experiences, I've developed a solid grip on both <strong>technical</strong> and <strong>soft skills</strong> 
-  that make me a well-rounded tech professional.<br><br>
-
-  With a background in <strong>Software Engineering (ADSE from Aptech)</strong> and hands-on exposure to <strong>cybersecurity, cloud computing, 
-  CMS platforms like WordPress & Shopify</strong>, and <strong>DevOps fundamentals</strong>, I bring a diverse skill set to the table. 
-  I love working on projects that challenge me to <strong>think critically</strong>, write clean code, and build solutions that are not just functional — 
-  but also meaningful.<br><br>
-
-  Whether it's managing databases with <strong>MySQL</strong>, debugging issues in <strong>Linux</strong>, or collaborating with a team using 
-  <strong>Git and GitHub</strong>, I thrive in dynamic environments where I can learn, grow, and contribute.<br><br>
-
-  What sets me apart is not just my tech stack — it's my ability to <strong>adapt, communicate effectively</strong>, and stay focused under pressure. 
-  From <strong>problem-solving</strong> to <strong>project management</strong>, I believe in delivering results with a mix of creativity, logic, and purpose.<br><br>
-
-  Let’s build something impactful together.
-</p>
-
+  <section id="about" class="particle-section py-12 px-4">
+    <h2 class="text-4xl text-red-500 text-center mb-10">About Me</h2>
+  
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 text-white text-base leading-relaxed">
+      
+      <div class="bg-[#111] p-6 rounded-2xl shadow-lg hover:shadow-red-500/30 transition-all duration-300">
+        <h3 class="text-xl font-semibold mb-2">🧠 The Mindset</h3>
+        <p>Driven by curiosity and discipline, I believe in building solutions that are clean, scalable, and purpose-driven. I love solving problems with a calm mind and creative lens.</p>
+      </div>
+  
+      <div class="bg-[#111] p-6 rounded-2xl shadow-lg hover:shadow-red-500/30 transition-all duration-300">
+        <h3 class="text-xl font-semibold mb-2">🎯 How I Work</h3>
+        <p>Every project I work on gets the same three things: clear structure, deep focus, and full commitment. I prioritize clarity in communication and logic in execution.</p>
+      </div>
+  
+      <div class="bg-[#111] p-6 rounded-2xl shadow-lg hover:shadow-red-500/30 transition-all duration-300 md:col-span-2">
+        <h3 class="text-xl font-semibold mb-2">🚀 Let’s Collaborate</h3>
+        <p>
+          I’m always open to working on purposeful projects that demand focus, creativity, and precision. 
+          Whether it’s a bold startup idea, a freelance venture, or a long-term opportunity — let’s connect and create something that stands out, adds value, and moves things forward.
+        </p>
+      </div>
+    </div>
   </section>
-
+  
   <!-- 🛠️ SKILLS -->
   <!-- <section id="skills" class="matrix-section">
   <h2 class="text-4xl text-red-500 mb-6">Skills</h2>
@@ -61,7 +77,7 @@
   </div>
 </section> -->
 
-  <section id="skills" class="matrix-section" style="justify-content:start;padding-top: 1rem;">
+  <section id="skills" class="matrix-section" style="justify-content:start;">
     <h2 class="text-4xl text-red-500 mb-6">Skills</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full">
       <div class="skill-category">
@@ -170,10 +186,10 @@
     </div>
 
 
-    <h2 class="text-4xl text-red-500 mb-1" style="padding-top: 2rem;">Other Skills</h2>
+    <h2 class="text-4xl text-red-500 mb-1" style="padding-top: 1rem;">Other Skills</h2>
     <div class="max-w-4xl w-full mx-auto">
       <div class="experience-card grid grid-cols-1 md:grid-cols-2 gap-8">
-    
+
         <!-- Core Skills Column -->
         <div class="skill-category">
           <h3 class="text-xl text-red-400 mb-4">Core Skills</h3>
@@ -200,7 +216,7 @@
             </div>
           </div>
         </div>
-    
+
         <!-- Soft Skills Column -->
         <div class="skill-category">
           <h3 class="text-xl text-red-400 mb-4">Soft Skills</h3>
@@ -227,14 +243,14 @@
             </div>
           </div>
         </div>
-    
+
       </div>
     </div>
 
 
 
   </section>
-  
+
 
   <!-- 💼 PROJECTS -->
   <!-- <section id="projects" class="particle-section">
@@ -264,42 +280,43 @@
           </div>
         </div>
         <h3 class="text-2xl mb-2">TimeCapsule</h3>
-        <p class="mb-2">A web app to store and send future-dated messages with media. Built using Django, JS, MySQL, GSAP & Cloudinary.</p>
+        <p class="mb-2">A web app to store and send future-dated messages with media. Built using Django, JS, MySQL,
+          GSAP & Cloudinary.</p>
         <!-- Add project details -->
-        </div>
+      </div>
 
       <div class="project-card group">
         <div class="relative overflow-hidden rounded-lg mb-4">
           <img src="src/BW.jpg" alt="Project Preview" class="w-full h-48 object-cover">
-          <div
+          <!-- <div
           class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
           <a href="https://thetimecapsule.xyz" class="btn">View Project</a>
+        </div> -->
         </div>
+        <h3 class="text-2xl mb-2">BidWise</h3>
+        <p class="mb-2">Final year project — secure auction platform like OLX with bid system, buyer verification &
+          seller rating. Laravel-powered.</p>
+
       </div>
-      <h3 class="text-2xl mb-2">BidWise</h3>
-        <p class="mb-2">Final year project — secure auction platform like OLX with bid system, buyer verification & seller rating. Laravel-powered.</p>
-      
-      <!-- Add project details -->
-    </div>
     </div>
   </section>
 
   <!-- Update Experience Section -->
   <section id="experience" class="matrix-section">
-    <h2 class="text-4xl text-red-500 mb-6">Experience</h2>
+    <h2 class="text-4xl text-red-500 mb-6">Internships</h2>
     <div class="max-w-4xl w-full">
       <div class="experience-card">
         <div class="flex justify-between items-start mb-4">
           <div>
             <h3 class="text-xl font-bold">Python Django Intern</h3>
-            <p class="text-red-400">CodeNova Solutions</p>
+            <p class="text-red-400">Technovate Pulse</p>
           </div>
-          <span class="text-sm text-gray-400">2023 - Present</span>
+          <span class="text-sm text-gray-400">2024 - 2025<span>
         </div>
         <ul class="list-disc list-inside space-y-2 text-gray-300">
-          <li>Developed and maintained web applications using Django</li>
-          <li>Implemented RESTful APIs and database optimizations</li>
-          <li>Collaborated with team using Git version control</li>
+          <li>Developed and maintained web applications, forms and modals using Django</li>
+          <li>Implemented RESTful APIs, database optimizations and integrated cloudinary API</li>
+          <li>Collaborated with team on GitHib and participated in Code reviews</li>
         </ul>
       </div>
     </div>
@@ -317,7 +334,7 @@
 
   <!-- Update Education Section -->
   <section id="education" class="particle-section">
-    <h2 class="text-4xl text-red-500 mb-6">Education</h2>
+    <h2 class="text-4xl text-red-500 mb-6 ">Education</h2>
     <div class="max-w-4xl w-full space-y-6">
       <div class="education-item">
         <div class="flex justify-between items-start">
@@ -327,23 +344,101 @@
           </div>
           <span class="text-sm text-gray-400">2021 - 2025</span>
         </div>
-        <p class="mt-2 text-gray-300">Major courses: Data Structures, Web Development, Database Management</p>
+        <p class="mt-2 text-gray-300">Major courses: Data Structures and Algorithms (DSA), Web Development, Database
+          Management Systems (DBMS)</p>
+      </div>
+
+      <div class="education-item">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-xl font-bold">ADSE (Advance Diploma in Software Engineering)</h3>
+            <p class="text-red-400">Aptech Pakistan</p>
+          </div>
+          <span class="text-sm text-gray-400">2021 - 2023</span>
+        </div>
+        <p class="mt-2 text-gray-300">Major courses: Software Engineering Principles, Object-Oriented Programming (OOP),
+          Cloud Computing &
+          DevOps </p>
+      </div>
+
+      <div class="education-item">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-xl font-bold">Blockchain certification Course</h3>
+            <p class="text-red-400">Programming Hub - Google Dev Launchpad</p>
+          </div>
+          <span class="text-sm text-gray-400">2024 Dec - Jan</span>
+        </div>
+        <p class="mt-2 text-gray-300"> Key Learnings: Blockchain technology, Smart Contracts,
+          Decentralized Applications (DApps)</p>
       </div>
     </div>
   </section>
 
   <!-- 📬 CONTACT -->
-  <section id="contact" class="matrix-section">
-    <h2 class="text-4xl text-red-500 mb-4">Contact</h2>
-    <p class="mb-2">📧 contact.agharafay@gmail.com</p>
-    <p class="mb-2">📱 0345-3556877</p>
-    <p class="mb-2">🔗 <a href="https://www.linkedin.com/in/agha-rafay" target="_blank"
-        class="underline text-blue-400">LinkedIn</a></p>
-    <p>💻 <a href="https://github.com/rafaydev" target="_blank" class="underline text-blue-400">GitHub</a></p>
+  <section id="contact" class="matrix-section py-16 px-6 text-white rounded-xl shadow-xl max-w-6xl mx-auto">
+    <h2 class="text-4xl text-red-500 mb-10 text-center border-b-2 border-red-500 pb-3">Get in Touch</h2>
+
+    <div class="project-card group grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <p class="text-lg text-gray-300 mt-10">
+          Got a vision worth building? Let’s turn bold ideas into real impact — whether it's a freelance collab, a
+          startup mission, or a full-time opportunity. I'm all in for innovation, execution, and making things that
+          matter. Let’s create something unforgettable together.
+        </p>
+
+        <div class="space-y-6 ">
+          <p>📧 <span class="text-blue-300">Email:</span> <a href="mailto:contact.agharafay@gmail.com"
+              class="text-red-500 underline">contact.agharafay@gmail.com</a></p>
+          <p>📱 <span class="text-blue-300">Phone:</span> <a href="tel:+923453556877"
+              class="text-red-500 underline">0345-3556877</a></p>
+          <p>🔗 <span class="text-blue-300">LinkedIn:</span> <a href="https://www.linkedin.com/in/agha-rafay"
+              target="_blank" class="text-red-500 underline">Agha-Rafay</a></p>
+          <p>💻 <span class="text-blue-300">GitHub:</span> <a href="https://github.com/Agha-Here" target="_blank"
+              class="text-red-500 underline">Agha-Here</a></p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form action="https://formsubmit.co/contact.agharafay@gmail.com" method="POST"
+        class="bg-gray-900 p-6 rounded-lg shadow-md space-y-5">
+        <!-- FormSubmit Note: free and no backend needed -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div>
+          <label class="block mb-1 text-sm text-gray-300">Your Email</label>
+          <input type="email" name="email" required placeholder="your@email.com"
+            class="w-full px-4 py-2 bg-black border border-gray-700 rounded text-white focus:outline-none focus:border-red-500" />
+        </div>
+
+        <div>
+          <label class="block mb-1 text-sm text-gray-300">Subject</label>
+          <input type="text" name="subject" required placeholder="Project idea, collaboration..."
+            class="w-full px-4 py-2 bg-black border border-gray-700 rounded text-white focus:outline-none focus:border-red-500" />
+        </div>
+
+        <div>
+          <label class="block mb-1 text-sm text-gray-300">Message</label>
+          <textarea name="message" rows="4" required placeholder="Let's talk about your next big idea!"
+            class="w-full px-4 py-2 bg-black border border-gray-700 rounded text-white focus:outline-none focus:border-red-500"></textarea>
+        </div>
+
+        <button type="submit"
+          class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition duration-300 w-full">
+          Send Message 🚀
+        </button>
+      </form>
+    </div>
   </section>
 
 
-<script src="src/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="src/script.js"></script>
 </body>
 
 </html>

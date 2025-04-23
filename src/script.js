@@ -5,7 +5,7 @@ const canvas = document.getElementById("matrixCanvas");
     canvas.width = window.innerWidth;
 
     const letters = "1010101100110101";
-    const fontSize = 16;
+    const fontSize = 12;
     const columns = canvas.width / fontSize;
     const drops = Array(Math.floor(columns)).fill(1);
 
@@ -151,17 +151,27 @@ const canvas = document.getElementById("matrixCanvas");
       });
 
       // Typing effect for landing page
-      const text = "Crafting Future-Ready Tech with Stealth and Precision";
-      const typingElement = document.querySelector('#landing p');
-      let i = 0;
+      
 
-      function typeWriter() {
-        if (i < text.length) {
-          typingElement.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 50);
-        }
-      }
+      
+    });
 
-      typeWriter();
+    var typed = new Typed("#typing", {
+      strings: [
+        "Full-Stack Web Developer",
+        "Python and Django Engineer",
+        "Back-End Architect with a Front-End Eye",
+        "Designing Scalable Systems and Clean Code",
+        "Always Learning, Always Building Forward"
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      smartBackspace: true,
+      fadeOut: true,
+      fadeOutClass: 'typed-fade-out',
+      fadeOutDelay: 300,
+      startDelay: 300,
+      backDelay: 1000,
+      loop: true,
+      showCursor: false
     });
