@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="src/styles.css" />
+  <link rel="icon" type="image/png" href="src/logo1.png">
 </head>
 
 <body>
@@ -16,67 +17,66 @@
   <canvas id="particleCanvas" class="particle-bg"></canvas>
 
 
-  <!-- 🎬 LANDING PAGE -->
+  <!-- LANDING PAGE -->
   <section id="landing" class="matrix-section min-h-screen flex flex-col justify-center items-center text-center px-4">
-    <!-- Name -->
     <h1 class="text-5xl md:text-7xl font-extrabold text-red-500 drop-shadow-lg mb-4 animate-pulse">
       AGHA ABDUL RAFAY
     </h1>
-  
-    <!-- Typing Effect Tagline -->
+
+    <!--Tagline -->
     <p class="text-lg md:text-2xl text-gray-200 mb-10 max-w-2xl h-10">
       <span id="typing"></span><span class="text-red-500">|</span>
     </p>
-    <!-- Cool Nav Section as CTA -->
+    <!--Nav Section-->
     <nav class="flex flex-wrap justify-center gap-4 mt-4">
-      <a href="#about" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">About</a>
-      <a href="#skills" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Skills</a>
-      <a href="#projects" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Projects</a>
-      <a href="#experience" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Experience</a>
-      <a href="#education" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Education</a>
-      <a href="#contact" class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Contact</a>
+      <a href="#about"
+        class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">About</a>
+      <a href="#skills"
+        class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Skills</a>
+      <a href="#projects"
+        class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Projects</a>
+      <a href="#experience"
+        class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Experience</a>
+      <a href="#education"
+        class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Education</a>
+      <a href="#contact"
+        class="text-white bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg shadow-md transition">Contact</a>
     </nav>
   </section>
-  
-  
 
-  <!-- 🧠 ABOUT -->
+
+
+  <!-- ABOUT -->
   <section id="about" class="particle-section py-12 px-4">
     <h2 class="text-4xl text-red-500 text-center mb-10">About Me</h2>
-  
+
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 text-white text-base leading-relaxed">
-      
+
       <div class="bg-[#111] p-6 rounded-2xl shadow-lg hover:shadow-red-500/30 transition-all duration-300">
         <h3 class="text-xl font-semibold mb-2">🧠 The Mindset</h3>
-        <p>Driven by curiosity and discipline, I believe in building solutions that are clean, scalable, and purpose-driven. I love solving problems with a calm mind and creative lens.</p>
+        <p>Driven by curiosity and discipline, I believe in building solutions that are clean, scalable, and
+          purpose-driven. I love solving problems with a calm mind and creative lens.</p>
       </div>
-  
+
       <div class="bg-[#111] p-6 rounded-2xl shadow-lg hover:shadow-red-500/30 transition-all duration-300">
         <h3 class="text-xl font-semibold mb-2">🎯 How I Work</h3>
-        <p>Every project I work on gets the same three things: clear structure, deep focus, and full commitment. I prioritize clarity in communication and logic in execution.</p>
+        <p>Every project I work on gets the same three things: clear structure, deep focus, and full commitment. I
+          prioritize clarity in communication and logic in execution.</p>
       </div>
-  
-      <div class="bg-[#111] p-6 rounded-2xl shadow-lg hover:shadow-red-500/30 transition-all duration-300 md:col-span-2">
+
+      <div
+        class="bg-[#111] p-6 rounded-2xl shadow-lg hover:shadow-red-500/30 transition-all duration-300 md:col-span-2">
         <h3 class="text-xl font-semibold mb-2">🚀 Let’s Collaborate</h3>
         <p>
-          I’m always open to working on purposeful projects that demand focus, creativity, and precision. 
-          Whether it’s a bold startup idea, a freelance venture, or a long-term opportunity — let’s connect and create something that stands out, adds value, and moves things forward.
+          I’m always open to working on purposeful projects that demand focus, creativity, and precision.
+          Whether it’s a bold startup idea, a freelance venture, or a long-term opportunity — let’s connect and create
+          something that stands out, adds value, and moves things forward.
         </p>
       </div>
     </div>
   </section>
-  
-  <!-- 🛠️ SKILLS -->
-  <!-- <section id="skills" class="matrix-section">
-  <h2 class="text-4xl text-red-500 mb-6">Skills</h2>
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center max-w-3xl">
-    <div>Python</div><div>Django</div><div>MySQL</div>
-    <div>HTML/CSS</div><div>JavaScript</div><div>WordPress</div>
-    <div>Git & GitHub</div><div>Cloudinary</div><div>SEO Tools</div>
-    <div>Linux</div><div>DBMS</div><div>Cybersecurity</div>
-  </div>
-</section> -->
 
+  <!-- SKILLS -->
   <section id="skills" class="matrix-section" style="justify-content:start;">
     <h2 class="text-4xl text-red-500 mb-6">Skills</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full">
@@ -110,7 +110,7 @@
               <div class="h-full bg-red-500 rounded" style="width: 70%"></div>
             </div>
           </div>
-          <!-- Add more skills similarly -->
+          <!--skills -->
         </div>
       </div>
 
@@ -178,11 +178,11 @@
               <div class="h-full bg-red-500 rounded" style="width: 50%"></div>
             </div>
           </div>
-          <!-- Add more skills similarly -->
+          <!-- more skills -->
         </div>
       </div>
 
-      <!-- Add more skill categories -->
+      <!--more skill categories -->
     </div>
 
 
@@ -252,22 +252,7 @@
   </section>
 
 
-  <!-- 💼 PROJECTS -->
-  <!-- <section id="projects" class="particle-section">
-  <h2 class="text-4xl text-red-500 mb-6">Projects</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 max-w-5xl">
-    <div class="p-6 border border-red-600 rounded-lg hover:bg-red-900 transition">
-      <h3 class="text-2xl mb-2">TimeCapsule</h3>
-      <p class="mb-2">A web app to store and send future-dated messages with media. Built using Django, JS, MySQL, GSAP & Cloudinary.</p>
-      <a href="https://timecapsule-r26e.onrender.com/" target="_blank" class="underline text-blue-400">Visit Project</a>
-    </div>
-    <div class="p-6 border border-red-600 rounded-lg hover:bg-red-900 transition">
-      <h3 class="text-2xl mb-2">BidWise</h3>
-      <p class="mb-2">Final year project — secure auction platform like OLX with bid system, buyer verification & seller rating. Laravel-powered.</p>
-    </div>
-  </div>
-</section> -->
-
+  <!-- PROJECTS -->
   <section id="projects" class="particle-section">
     <h2 class="text-4xl text-red-500 mb-6">Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
@@ -282,16 +267,12 @@
         <h3 class="text-2xl mb-2">TimeCapsule</h3>
         <p class="mb-2">A web app to store and send future-dated messages with media. Built using Django, JS, MySQL,
           GSAP & Cloudinary.</p>
-        <!-- Add project details -->
+        <!-- project details -->
       </div>
 
       <div class="project-card group">
         <div class="relative overflow-hidden rounded-lg mb-4">
           <img src="src/BW.jpg" alt="Project Preview" class="w-full h-48 object-cover">
-          <!-- <div
-          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-          <a href="https://thetimecapsule.xyz" class="btn">View Project</a>
-        </div> -->
         </div>
         <h3 class="text-2xl mb-2">BidWise</h3>
         <p class="mb-2">Final year project — secure auction platform like OLX with bid system, buyer verification &
@@ -301,7 +282,7 @@
     </div>
   </section>
 
-  <!-- Update Experience Section -->
+  <!--Experience Section -->
   <section id="experience" class="matrix-section">
     <h2 class="text-4xl text-red-500 mb-6">Internships</h2>
     <div class="max-w-4xl w-full">
@@ -322,17 +303,7 @@
     </div>
   </section>
 
-  <!-- 🎓 EDUCATION
-<section id="education" class="particle-section">
-    <h2 class="text-4xl text-red-500 mb-4">Education</h2>
-  <div class="text-center">
-    <p class="mb-2">🎓 BS Information Technology – University of Sindh (2021–2025)</p>
-    <p class="mb-2">🎓 Advanced Diploma in Software Engineering – Aptech (2021–2023)</p>
-    <p>📜 Blockchain Certification – Google Dev Launchpad (2024–2025)</p>
-  </div>
-</section> -->
-
-  <!-- Update Education Section -->
+  <!-- EDUCATION-->
   <section id="education" class="particle-section">
     <h2 class="text-4xl text-red-500 mb-6 ">Education</h2>
     <div class="max-w-4xl w-full space-y-6">
@@ -403,7 +374,6 @@
       <!-- Contact Form -->
       <form action="https://formsubmit.co/contact.agharafay@gmail.com" method="POST"
         class="bg-gray-900 p-6 rounded-lg shadow-md space-y-5">
-        <!-- FormSubmit Note: free and no backend needed -->
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
 
