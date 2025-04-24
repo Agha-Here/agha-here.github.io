@@ -23,15 +23,14 @@ Welcome to **PortXFolio**, a uniquely styled, responsive, and dynamic developer 
 - **Experience & Education Timeline**
 - **Project Showcase** with links & previews
 - **Custom Contact Form** via FormSubmit (no backend needed)
-- **Shareable QR Code + Social Links**
 - **Custom Domain Integration** with Cloudflare DNS
 
 ---
 
 ## 🛠️ Built With
 
-`HTML`, `CSS`, `JavaScript`, `GSAP`, `AOS`, `TailwindCSS`, `Three.js`, `particles.js`,  
-`FormSubmit`, `Cloudinary`, `FontAwesome`, `Google Fonts`,  
+`HTML`, `CSS`, `JavaScript`, `TailwindCSS`, `Three.js`, `particles.js`,  
+`FormSubmit`, `FontAwesome`, `Google Fonts`,  
 Deployed with **GitHub Pages** + **Cloudflare** + **Namecheap** Domain
 
 ---
